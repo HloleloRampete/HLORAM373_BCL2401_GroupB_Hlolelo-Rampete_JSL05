@@ -11,6 +11,14 @@ const songs = [
     { title: "Come and Get Your Love", artist: "Redbone", genre: "Rock" },
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
     { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
+    { title: "Livin' it up", artist: "Bill LaBounty", genre: "Pop"},
+    { title: "Unthinkable", artist: "Alicia Keys", genre: "R&B"},
+    { title: "Pound Cake / Paris Morton Music 2", artist: "Drake", genre: "Rap"},
+    { title: "Mrs Me", artist: "Nasty C", genre: "Rap"},
+    { title: "Composure", artist: "AKA", genre: "Rap"},
+    { title: "What a Wonderful World", artist: "Louis Armstrong", genre: "Jazz"},
+    { title: "Queen Tings", artist: "Masego", genre: "Jazz"},
+    { title: "I Put a Spell on You", artist: "Nina Simone", genre: "Jazz"}
     // Feel free to add even more songs
 ];
 
@@ -19,6 +27,9 @@ const songs = [
 const guardians = {
     "Star-Lord": "Rock",
     "Gamora": "Pop",
+    "Drax": "Rap",
+    "Rocket": "R&B",
+    "Groot": "Jazz"
     // Add preferences for Drax, Rocket, and Groot
 };
 
