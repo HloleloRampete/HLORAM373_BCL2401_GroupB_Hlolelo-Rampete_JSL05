@@ -25,6 +25,9 @@
     // Return the playlists object containing playlists for each Guardian
     return playlists;
 }```
+
+
+
 ***Extra Notes:*** 
 1. The function generatePlaylist() takes two parameters: guardians (an array containing the names of the Guardians) and songs (an array of objects, where each object represents a song genre along with an array of songs belonging to that genre).
 2. Inside the function, an empty object playlists is initialized to store playlists for each Guardian.
