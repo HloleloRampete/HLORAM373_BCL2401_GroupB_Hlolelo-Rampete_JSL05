@@ -24,7 +24,8 @@ const songs = [
 
 
 // Object containing each Guardian's preferred genre
-const guardians = {
+const guardians = { 
+    // The guardian constant is a dictionary (guardians) mapping the guardians to song genre.
     "Star-Lord": "Rock",
     "Gamora": "Pop",
     "Drax": "Rap",
@@ -36,7 +37,7 @@ const guardians = {
 // Function to generate playlist based on preferred genre
 function generatePlaylist(guardians, songs) { // Object.entries(): This method is used to convert an object into an array of its key-value pairs. In this case, guardians is the object being converted.
     // Use the map() function to create playlists for each Guardian
-    const playlists = Object.entries(guardians).map(([name, genre]) => { // The destructuring assignment [name, genre] extracts the name and genre from each pair.
+    const playlists = Object.entries(guardians).map(([name, genre]) => { // The destructuring assignment [name, genre] extracts the name and genre from object.
       // Filter the songs array based on the specified genre
       const songsOfPreferredGenre = songs.filter(song => song.genre === genre); // Here, it filters songs based on whether their genre matches the genre extracted from guardians.
   
@@ -58,6 +59,7 @@ function generatePlaylist(guardians, songs) { // Object.entries(): This method i
   }
   
   // Helper function to display the playlists
+  // Arrow Functions (ES6): A concise way to write functions in JavaScript. Perfect for short functions and passing them as arguments.
 function displayPlaylists(playlists) {
   // Create a container div for playlists
   const playlistsDiv = document.createElement('div');
