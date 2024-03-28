@@ -16,7 +16,7 @@ const songs = [
     { title: "Pound Cake / Paris Morton Music 2", artist: "Drake", genre: "Rap"},
     { title: "Mrs Me", artist: "Nasty C", genre: "Rap"},
     { title: "Composure", artist: "AKA", genre: "Rap"},
-    { title: "What a Wonderful World", artist: "Louis Armstrong", genre: "Jazz"},
+    { title: "What a Wonderdiv World", artist: "Louis Armstrong", genre: "Jazz"},
     { title: "Queen Tings", artist: "Masego", genre: "Jazz"},
     { title: "I Put a Spell on You", artist: "Nina Simone", genre: "Jazz"}
     // Feel free to add even more songs
@@ -43,10 +43,10 @@ function generatePlaylist(guardians, songs) { // Object.entries(): This method i
   
       // Generate a random playlist of 3 songs
       const playlist = songsOfPreferredGenre
-        .sort(() => 0.5 - Math.random()) // This method sorts the elements of an array in place and returns the sorted array.
-        .slice(0, 3); /* Creates a shallow copy of a portion of an array. 
-        This method returns a shallow copy of a portion of an array into a new array selected from start to end (end not included) where start is inclusive and end is exclusive. 
-        Here, it's used to select the first three songs after they've been shuffled. */
+        // .sort(() => 0.5 - Math.random()) // This method sorts the elements of an array in place and returns the sorted array.
+        // .slice(0, 3); /* Creates a shallow copy of a portion of an array. 
+        // This method returns a shallow copy of a portion of an array into a new array selected from start to end (end not included) where start is inclusive and end is exclusive. 
+        // Here, it's used to select the first three songs after they've been shuffled. */
 
       // Add the guardian's name as the first element of the playlist
       playlist.unshift({ name }); // it adds an object containing the name of the playlist to the beginning of the playlist array.
@@ -58,6 +58,9 @@ function generatePlaylist(guardians, songs) { // Object.entries(): This method i
     displayPlaylists(playlists);
   }
   
+// Function to separate the song list on HTML
+
+
   // Helper function to display the playlists
   // Arrow Functions (ES6): A concise way to write functions in JavaScript. Perfect for short functions and passing them as arguments.
 function displayPlaylists(playlists) {
@@ -77,19 +80,20 @@ function displayPlaylists(playlists) {
     playlistDiv.appendChild(title)
 
     // Create an unordered list
-    const list = document.createElement('ul');
+    const list = document.createElement('div');
 
     // Loop through each song in the playlist
     playlist.slice(1).forEach((song) => {
       // Create a list items
-      const listItem = document.createElement('ul');
+      const listItem = document.createElement('div');
+      listItem.className = 'song'; // creating space between the songs on the list
 
       // Set the song title and artist
       const songTitle = document.createElement('span');
-      songTitle.textContent = `${song.title} `;
+      songTitle.textContent = `${song.title}`; // spacing created on line 96 to avoiding underlining until 'by ${song.artist}`. 
       songTitle.className = 'song-title';
       const songArtist = document.createElement('span');
-      songArtist.textContent = `by ${song.artist}`;
+      songArtist.textContent = ` by ${song.artist}`;
 
       // Append the title and artist to the list item
       listItem.appendChild(songTitle);
