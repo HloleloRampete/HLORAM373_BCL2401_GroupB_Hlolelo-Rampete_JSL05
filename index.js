@@ -86,7 +86,7 @@ function displayPlaylists(playlists) {
     playlist.slice(1).forEach((song) => {
       // Create a list items
       const listItem = document.createElement('div');
-      listItem.className = 'song'; // creating space between the songs on the list
+      listItem.className = 'song'; // creating space between the songs on the playlist 
 
       // Set the song title and artist
       const songTitle = document.createElement('span');
