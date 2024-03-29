@@ -44,7 +44,7 @@ function generatePlaylist(guardians, songs) { // Object.entries(): This method i
       // Generate a random playlist of 3 songs
       const playlist = songsOfPreferredGenre
         // .sort(() => 0.5 - Math.random()) // This method sorts the elements of an array in place and returns the sorted array.
-        // .slice(0, 3); /* Creates a shallow copy of a portion of an array. 
+         .slice(0, 3); /* Creates a shallow copy of a portion of an array. 
         // This method returns a shallow copy of a portion of an array into a new array selected from start to end (end not included) where start is inclusive and end is exclusive. 
         // Here, it's used to select the first three songs after they've been shuffled. */
 
