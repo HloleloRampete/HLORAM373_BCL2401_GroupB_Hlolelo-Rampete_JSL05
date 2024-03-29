@@ -57,9 +57,6 @@ function generatePlaylist(guardians, songs) { // Object.entries(): This method i
     // Call function to display the playlists
     displayPlaylists(playlists);
   }
-  
-// Function to separate the song list on HTML
-
 
   // Helper function to display the playlists
   // Arrow Functions (ES6): A concise way to write functions in JavaScript. Perfect for short functions and passing them as arguments.
